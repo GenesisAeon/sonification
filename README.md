@@ -1,84 +1,78 @@
-# diamond-setup
+# sonification
 
-**Universal Python project scaffold** — generate professional, CI-ready skeletons in seconds.
+**The auditory layer of the GenesisAeon stack** – turn entropy waves, UTAC thresholds, cosmic moments and mandala resonance into audible tones, rhythms and soundscapes.
 
-[![CI](https://github.com/GenesisAeon/diamond-setup/actions/workflows/ci.yml/badge.svg)](https://github.com/GenesisAeon/diamond-setup/actions/workflows/ci.yml)
+[![CI](https://github.com/GenesisAeon/sonification/actions/workflows/ci.yml/badge.svg)](https://github.com/GenesisAeon/sonification/actions/workflows/ci.yml)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-
-No cookiecutter, no Jinja2, no magic. Just a clean CLI that produces a fully working project — `uv sync`, `pytest`, ruff, pre-commit and CI all wired up from second one.
+[![PyPI](https://img.shields.io/pypi/v/sonification)](https://pypi.org/project/sonification/)
 
 ---
 
 ## Install
 
 ```bash
-pip install diamond-setup
+pip install sonification
 # or
-uv tool install diamond-setup
+uv tool install sonification
 ```
 
-## Usage
+With full GenesisAeon stack integration:
 
 ```bash
-# New project with the minimal template (default)
-diamond scaffold my-lib
-
-# GenesisAeon preset (adds domains.yaml + entropy-table bridge)
-diamond scaffold my-physics-tool --template genesis --author "Ada Lovelace"
-
-# Preview what would be generated (no files written)
-diamond scaffold my-lib --dry-run
-
-# See all templates
-diamond list-templates
-
-# Validate any project directory
-diamond validate path/to/my-project
-diamond validate          # validates the current directory
+pip install sonification[stack]
 ```
 
-## What you get
-
-Running `diamond scaffold my-lib` produces:
-
-```
-my-lib/
-├── src/
-│   └── my_lib/
-│       └── __init__.py       # __version__ = "0.1.0"
-├── tests/
-│   ├── __init__.py
-│   └── test_main.py
-├── .github/
-│   └── workflows/
-│       └── ci.yml            # matrix: 3.11 + 3.12
-├── pyproject.toml            # hatchling, ruff, pytest configured
-├── README.md
-├── .gitignore
-└── .pre-commit-config.yaml   # ruff + standard hooks
-```
-
-Then just:
+## Quick start
 
 ```bash
-cd my-lib
-uv sync --dev
-pre-commit install
-uv run pytest
+# Entropy wave → WAV (φ-based frequency, 5 seconds)
+soni wave --freq 1.618 --duration 5
+
+# UTAC threshold → MIDI sequence
+soni entropy-gate --beta 0.0625
+
+# Mandala resonance → rhythm pattern
+soni mandala --bpm 120
 ```
 
-## Templates
+## Python API
 
-| Template | Description |
-|----------|-------------|
-| `minimal` | Clean Python package for everyone |
-| `genesis` | Adds `domains.yaml` + entropy-table bridge (GenesisAeon preset) |
+```python
+import numpy as np
+from sonification import entropy_wave_to_audio, save_wave, utac_to_midi
 
-## Extending
+# Generate a φ-frequency sine tone
+wave = entropy_wave_to_audio(freq=1.618, duration=5.0)
+save_wave(wave, "entropy_wave.wav")
 
-Adding a new template is one Python file. See [docs/templates.md](docs/templates.md).
+# Map a UTAC β value to a MIDI sequence
+utac_to_midi(beta=0.0625, notes=8, filename="utac_midi.mid")
+```
+
+## Stack position
+
+```
+field-theory → sigillin → utac-core → mandala-visualizer → sonification
+```
+
+`sonification` is the **audio layer** – it listens to the stack and makes data audible.
+
+| Source | Output |
+|--------|--------|
+| Entropy wave (φ) | Sine tone → WAV |
+| UTAC β threshold | Pitch sequence → MIDI |
+| Mandala resonance | Rhythm pattern |
+
+## CLI reference
+
+```
+soni wave          Generate entropy-wave sine tone (WAV)
+soni entropy-gate  Sonify UTAC threshold (MIDI)
+soni mandala       Sonify mandala resonance (rhythm)
+soni version       Show installed version
+```
 
 ---
 
-Built with [uv](https://docs.astral.sh/uv/) · [Typer](https://typer.tiangolo.com/) · [Rich](https://rich.readthedocs.io/)
+Built with [numpy](https://numpy.org/) · [scipy](https://scipy.org/) · [midiutil](https://github.com/MarkCWirt/MIDIUtil) · [Typer](https://typer.tiangolo.com/) · [Rich](https://rich.readthedocs.io/)

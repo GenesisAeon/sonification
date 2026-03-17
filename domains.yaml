@@ -1,0 +1,7 @@
+domains:
+  sonification:
+    entropy_freq_default: 1.618
+    utac_beta_default: 0.0625
+    sample_rate: 44100
+    midi_tempo_default: 120
+    amplitude_default: 0.5
