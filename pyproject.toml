@@ -32,7 +32,7 @@ stack = [
     "mandala-visualizer>=0.1.0",
     "utac-core>=0.1.0",
     "sigillin>=0.1.0",
-    "field-theory>=0.1.0",
+    # field-theory: pending PyPI release – add back once published
     "cosmic-moment>=0.1.0",
     "medium-modulation>=0.1.0",
     "entropy-governance>=0.1.0",
