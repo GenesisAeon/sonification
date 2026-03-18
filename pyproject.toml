@@ -1,57 +1,72 @@
 [project]
-name = "diamond-setup"
-version = "1.0.0"
-description = "Universal Python project scaffold — generate professional project skeletons in seconds"
+name = "sonification"
+version = "0.1.0"
+description = "Data sonification layer for the GenesisAeon stack – entropy waves to sine tones, UTAC thresholds to pitches, mandala resonance to rhythms."
 readme = "README.md"
 license = { text = "MIT" }
-authors = [{ name = "GenesisAeon" }]
+authors = [{ name = "GenesisAeon Team", email = "team@genesisaeon.org" }]
 requires-python = ">=3.11"
-keywords = ["scaffold", "template", "cli", "project-generator", "skeleton"]
+keywords = ["sonification", "audio", "entropy", "midi", "genesisaeon", "data-to-sound"]
 classifiers = [
-    "Development Status :: 5 - Production/Stable",
+    "Development Status :: 3 - Alpha",
     "Environment :: Console",
-    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Topic :: Software Development :: Code Generators",
+    "Topic :: Multimedia :: Sound/Audio",
+    "Topic :: Scientific/Engineering",
 ]
 dependencies = [
-    "typer>=0.12.0",
-    "rich>=13.7.0",
-    "pyyaml>=6.0",
-    "pydantic>=2.7",
+    "numpy>=2.0.0",
+    "scipy>=1.14.0",
+    "matplotlib>=3.8.0",
+    "midiutil>=1.2.1",
+    "rich>=13.0.0",
+    "typer>=0.15.0",
 ]
 
 [project.optional-dependencies]
-docs = [
-    "mkdocs>=1.6.0",
-    "mkdocs-material>=9.5.0",
+stack = [
+    "mandala-visualizer>=0.1.0",
+    "utac-core>=0.1.0",
+    "sigillin>=0.1.0",
+    # field-theory: pending PyPI release – add back once published
+    "cosmic-moment>=0.1.0",
+    "medium-modulation>=0.1.0",
+    "entropy-governance>=0.1.0",
+    "entropy-table>=1.0.1",
+    "implosive-genesis>=0.4.0",
 ]
 dev = [
-    "ruff>=0.6.0",
-    "pre-commit>=3.7.0",
     "pytest>=8.0.0",
     "pytest-cov>=5.0.0",
+    "ruff>=0.9.0",
+    "pre-commit>=3.7.0",
+]
+docs = [
+    "mkdocs>=1.6.0",
+    "mkdocs-material>=9.6.0",
+    "mkdocstrings[python]>=0.27.0",
 ]
 
 [project.scripts]
-diamond = "diamond_setup.cli:app"
+soni = "sonification.cli:app"
 
 [project.urls]
-Repository = "https://github.com/GenesisAeon/diamond-setup"
-Issues = "https://github.com/GenesisAeon/diamond-setup/issues"
+Repository = "https://github.com/GenesisAeon/sonification"
+Issues = "https://github.com/GenesisAeon/sonification/issues"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/diamond_setup"]
+packages = ["src/sonification"]
 
 [tool.ruff]
-line-length = 100
+line-length = 88
 target-version = "py311"
 
 [tool.ruff.lint]
@@ -63,7 +78,7 @@ ignore = ["B008"]  # typer uses function calls in defaults
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "--cov=diamond_setup --cov-report=term-missing -v"
+addopts = "--cov=sonification --cov-report=term-missing -v"
 
 [tool.coverage.run]
 source = ["src"]
