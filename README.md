@@ -53,7 +53,7 @@ utac_to_midi(beta=0.0625, notes=8, filename="utac_midi.mid")
 ## Stack position
 
 ```
-field-theory → sigillin → utac-core → mandala-visualizer → sonification
+fieldtheory → sigillin → utac-core → mandala-visualizer → sonification
 ```
 
 `sonification` is the **audio layer** – it listens to the stack and makes data audible.
