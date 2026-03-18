@@ -6,6 +6,7 @@
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![PyPI](https://img.shields.io/pypi/v/sonification)](https://pypi.org/project/sonification/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19086583.svg)](https://doi.org/10.5281/zenodo.19086583)
 
 ---
 
@@ -76,3 +77,22 @@ soni version       Show installed version
 ---
 
 Built with [numpy](https://numpy.org/) · [scipy](https://scipy.org/) · [midiutil](https://github.com/MarkCWirt/MIDIUtil) · [Typer](https://typer.tiangolo.com/) · [Rich](https://rich.readthedocs.io/)
+
+---
+
+## Citation
+
+If you use this software in your research, please cite it:
+
+```bibtex
+@software{genesisaeon_sonification,
+  author    = {GenesisAeon Team},
+  title     = {sonification},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.19086583},
+  url       = {https://doi.org/10.5281/zenodo.19086583}
+}
+```
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19086583.svg)](https://doi.org/10.5281/zenodo.19086583)

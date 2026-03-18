@@ -40,3 +40,20 @@ fieldtheory → sigillin → utac-core → mandala-visualizer → sonification
 | Entropy wave (φ) | Sine tone → WAV |
 | UTAC β threshold | Pitch sequence → MIDI |
 | Mandala resonance | Rhythm pattern |
+
+## Citation
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19086583.svg)](https://doi.org/10.5281/zenodo.19086583)
+
+If you use this software in your research, please cite it:
+
+```bibtex
+@software{genesisaeon_sonification,
+  author    = {GenesisAeon Team},
+  title     = {sonification},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.19086583},
+  url       = {https://doi.org/10.5281/zenodo.19086583}
+}
+```
