@@ -32,7 +32,7 @@ soni mandala --bpm 120
 ## Stack position
 
 ```
-field-theory → sigillin → utac-core → mandala-visualizer → sonification
+fieldtheory → sigillin → utac-core → mandala-visualizer → sonification
 ```
 
 | Source | Output |
