@@ -1,37 +1,42 @@
-# Diamond Setup
+# sonification
 
-**Universal Python project scaffold** — generate professional, CI-ready project skeletons in seconds.
+**The auditory layer of the GenesisAeon stack** – turn entropy waves, UTAC thresholds, cosmic moments and mandala resonance into audible tones, rhythms and soundscapes.
 
-No cookiecutter, no Jinja2, no magic. Just a clean CLI, sensible templates, and a validator that keeps your projects healthy.
+## Install
+
+```bash
+pip install sonification
+# or
+uv tool install sonification
+```
+
+With full stack integration:
+
+```bash
+pip install sonification[stack]
+```
 
 ## Quickstart
 
 ```bash
-pip install diamond-setup
-# or with uv:
-uv tool install diamond-setup
+# φ-based entropy sine tone → WAV
+soni wave --freq 1.618 --duration 5
+
+# UTAC β threshold → MIDI
+soni entropy-gate --beta 0.0625
+
+# Mandala resonance → rhythm pattern
+soni mandala --bpm 120
 ```
 
-```bash
-diamond scaffold my-new-tool
-cd my-new-tool && uv sync --dev && uv run pytest
+## Stack position
+
+```
+field-theory → sigillin → utac-core → mandala-visualizer → sonification
 ```
 
-## Why Diamond Setup?
-
-| Feature | diamond-setup | cookiecutter | copier |
-|---------|:---:|:---:|:---:|
-| Zero config needed | ✅ | ❌ | ❌ |
-| Built-in validator | ✅ | ❌ | ❌ |
-| Pure Python templates | ✅ | ❌ | ❌ |
-| `--dry-run` support | ✅ | ❌ | ✅ |
-| Extensible presets | ✅ | ✅ | ✅ |
-
-## Commands
-
-| Command | Description |
-|---------|-------------|
-| `diamond scaffold <name>` | Create a new project |
-| `diamond list-templates` | Show available templates |
-| `diamond validate [path]` | Check a project's health |
-| `diamond version` | Show version |
+| Source | Output |
+|--------|--------|
+| Entropy wave (φ) | Sine tone → WAV |
+| UTAC β threshold | Pitch sequence → MIDI |
+| Mandala resonance | Rhythm pattern |

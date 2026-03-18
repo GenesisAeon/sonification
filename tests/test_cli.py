@@ -1,8 +1,5 @@
 """Tests for the sonification CLI commands."""
 
-from pathlib import Path
-
-import numpy as np
 from typer.testing import CliRunner
 
 from sonification.cli import app
@@ -18,10 +15,12 @@ def test_version():
 
 def test_wave_command(tmp_path):
     output = tmp_path / "test.wav"
-    result = runner.invoke(app, ["wave", "--freq", "440.0", "--duration", "1.0", "--output", str(output)])
+    result = runner.invoke(
+        app, ["wave", "--freq", "440.0", "--duration", "1.0", "--output", str(output)]
+    )
     assert result.exit_code == 0, result.output
     assert output.exists()
-    assert "Entropy wave saved" in result.output
+    assert "Saved" in result.output
 
 
 def test_wave_command_default_output(tmp_path, monkeypatch):

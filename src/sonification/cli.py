@@ -5,11 +5,16 @@ from __future__ import annotations
 import typer
 from rich.console import Console
 
-from .core import entropy_wave_to_audio, mandala_resonance_to_rhythm, save_wave, utac_to_midi
+from .core import (
+    entropy_wave_to_audio,
+    mandala_resonance_to_rhythm,
+    save_wave,
+    utac_to_midi,
+)
 
 app = typer.Typer(
     name="soni",
-    help="Sonification CLI – convert entropy waves, UTAC thresholds and mandala resonance to audio.",
+    help="Sonification CLI – data to sound for the GenesisAeon stack.",
     add_completion=False,
 )
 console = Console()
@@ -33,7 +38,7 @@ def wave(
     """Generate an entropy-wave sine tone and save it as a WAV file."""
     audio = entropy_wave_to_audio(freq=freq, duration=duration, amplitude=amplitude)
     save_wave(audio, filename=output)
-    console.print(f"[bold green]Entropy wave saved to[/] {output}  (freq={freq} Hz, {duration}s)")
+    console.print(f"[bold green]Saved[/] {output}  ({freq} Hz, {duration}s)")
 
 
 @app.command()
@@ -45,7 +50,7 @@ def entropy_gate(
 ) -> None:
     """Sonify a UTAC entropy-gate threshold as a MIDI sequence."""
     midi_file = utac_to_midi(beta=beta, notes=notes, tempo=tempo, filename=output)
-    console.print(f"[bold cyan]UTAC MIDI saved to[/] {midi_file}  (β={beta}, {notes} notes)")
+    console.print(f"[bold cyan]UTAC MIDI saved to[/] {midi_file}  (β={beta}, {notes}n)")
 
 
 @app.command()

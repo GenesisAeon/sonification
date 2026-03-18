@@ -40,4 +40,4 @@ markdown_extensions:
 nav:
   - Home: index.md
   - CLI Reference: cli.md
-  - API: api.md
+  - API Reference: api.md

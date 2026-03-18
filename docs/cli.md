@@ -1,88 +1,76 @@
 # CLI Reference
 
-## `diamond scaffold`
+## `soni wave`
 
-Create a new project from a template.
+Generate an entropy-wave sine tone and save it as a WAV file.
 
 ```
-Usage: diamond scaffold [OPTIONS] PROJECT_NAME
-
-Arguments:
-  PROJECT_NAME  Name of the new project (kebab-case recommended)
+Usage: soni wave [OPTIONS]
 
 Options:
-  -t, --template TEXT       Template to use [default: minimal]
-  -o, --output-dir PATH     Parent directory for the new project
-  --author TEXT             Author name
-  --description TEXT        Short project description
-  --python-version TEXT     Minimum Python version (e.g. 3.11)
-  --dry-run                 Preview files without writing them
+  --freq      FLOAT  Frequency in Hz (default φ = 1.618)
+  --duration  FLOAT  Duration in seconds [default: 5.0]
+  --output    TEXT   Output WAV filename [default: entropy_wave.wav]
+  --amplitude FLOAT  Peak amplitude in [0, 1] [default: 0.5]
 ```
 
 **Examples**
 
 ```bash
-# Minimal project in the current directory
-diamond scaffold my-lib
-
-# Genesis preset with custom author
-diamond scaffold my-physics-tool --template genesis --author "Ada Lovelace"
-
-# Preview what would be created
-diamond scaffold my-lib --dry-run
-
-# Output to a specific directory
-diamond scaffold my-lib --output-dir ~/projects
+soni wave
+soni wave --freq 440.0 --duration 2.0 --output tone_440.wav
+soni wave --freq 1.618 --amplitude 0.8
 ```
 
 ---
 
-## `diamond list-templates`
+## `soni entropy-gate`
 
-List all available templates with their descriptions.
+Map a UTAC β threshold to a MIDI pitch sequence.
+
+```
+Usage: soni entropy-gate [OPTIONS]
+
+Options:
+  --beta    FLOAT  UTAC β threshold in (0, 1] [default: 0.0625]
+  --notes   INT    Number of MIDI notes [default: 8]
+  --tempo   INT    Tempo in BPM [default: 120]
+  --output  TEXT   Output MIDI filename [default: utac_midi.mid]
+```
+
+**Examples**
 
 ```bash
-diamond list-templates
+soni entropy-gate
+soni entropy-gate --beta 0.5 --notes 16
 ```
 
 ---
 
-## `diamond validate`
+## `soni mandala`
 
-Validate a project directory against diamond-setup best practices.
+Extract a rhythm pattern from a mandala resonance signal.
 
 ```
-Usage: diamond validate [PATH]
+Usage: soni mandala [OPTIONS]
 
-Arguments:
-  PATH  Project directory to validate [default: current directory]
+Options:
+  --bpm  INT  BPM for rhythm mapping [default: 120]
 ```
 
-Checks performed:
-
-| Check | Level |
-|-------|-------|
-| `pyproject.toml` present | **Error** |
-| `src/` layout present | Warning |
-| `tests/` directory present | Warning |
-| `.github/workflows/` present | Warning |
-| `README.md` present | Warning |
-| `.gitignore` present | Warning |
+**Examples**
 
 ```bash
-# Validate the current directory
-diamond validate
-
-# Validate a specific project
-diamond validate path/to/my-project
+soni mandala
+soni mandala --bpm 90
 ```
 
 ---
 
-## `diamond version`
+## `soni version`
 
 Print the installed version.
 
 ```bash
-diamond version
+soni version
 ```
