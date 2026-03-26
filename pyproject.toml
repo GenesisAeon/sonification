@@ -1,7 +1,7 @@
-[project]
+﻿[project]
 name = "sonification"
-version = "0.1.0"
-description = "Data sonification layer for the GenesisAeon stack – entropy waves to sine tones, UTAC thresholds to pitches, mandala resonance to rhythms."
+version = "0.3.1"
+description = "Data sonification layer for the GenesisAeon stack â€“ entropy waves to sine tones, UTAC thresholds to pitches, mandala resonance to rhythms."
 readme = "README.md"
 license = { text = "MIT" }
 authors = [{ name = "GenesisAeon Team", email = "team@genesisaeon.org" }]
@@ -85,3 +85,4 @@ addopts = "--cov=sonification --cov-report=term-missing -v"
 [tool.coverage.run]
 source = ["src"]
 omit = ["tests/*"]
+

@@ -1,6 +1,6 @@
-"""Sonification – auditory layer for the GenesisAeon stack."""
+﻿"""Sonification â€“ auditory layer for the GenesisAeon stack."""
 
-__version__ = "0.1.0"
+__version__ = "0.3.1"
 
 from .core import (
     entropy_wave_to_audio,
@@ -16,3 +16,4 @@ __all__ = [
     "utac_to_midi",
     "mandala_resonance_to_rhythm",
 ]
+
