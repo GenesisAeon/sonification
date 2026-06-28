@@ -1,9 +1,9 @@
 [project]
 name = "sonification"
-version = "0.1.0"
-description = "Data sonification layer for the GenesisAeon stack â€“ entropy waves to sine tones, UTAC thresholds to pitches, mandala resonance to rhythms."
+version = "1.0.0"
+description = "Data sonification layer for the GenesisAeon stack -- entropy waves to sine tones, UTAC thresholds to pitches, mandala resonance to rhythms."
 readme = "README.md"
-license = { text = "MIT" }
+license = { text = "GPL-3.0-or-later" }
 authors = [{ name = "GenesisAeon Team", email = "team@genesisaeon.org" }]
 requires-python = ">=3.11"
 keywords = ["sonification", "audio", "entropy", "midi", "genesisaeon", "data-to-sound"]
@@ -11,7 +11,7 @@ classifiers = [
     "Development Status :: 3 - Alpha",
     "Environment :: Console",
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
@@ -29,15 +29,15 @@ dependencies = [
 
 [project.optional-dependencies]
 stack = [
-    "mandala-visualizer>=0.1.0",
-    "utac-core>=0.1.0",
-    "sigillin>=0.1.0",
-    "fieldtheory>=0.1.0",
-    "cosmic-moment>=0.1.0",
-    "medium-modulation>=0.1.0",
-    "entropy-governance>=0.1.0",
-    "entropy-table>=1.0.1",
-    "implosive-genesis>=0.4.0",
+    "mandala-visualizer>=1.0.0",
+    "utac-core>=1.0.0",
+    "sigillin>=1.0.0",
+    "fieldtheory>=1.0.0",
+    "cosmic-moment>=1.0.0",
+    "medium-modulation>=1.0.0",
+    "entropy-governance>=1.0.0",
+    "entropy-table>=2.0.0",
+    "implosive-genesis>=1.0.0",
 ]
 dev = [
     "pytest>=8.0.0",

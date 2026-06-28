@@ -85,6 +85,15 @@ Built with [numpy](https://numpy.org/) · [scipy](https://scipy.org/) · [midiut
 
 ---
 
+## Role in the GenesisAeon Ecosystem
+
+`sonification` is **P-SONIC** in the GenesisAeon package registry — the
+audio-mapping layer of the ecosystem. It has no characteristic CREP
+coupling value (Γ) of its own; instead it sonifies the Γ/CREP/UTAC state
+produced by upstream packages (`utac-core`, `fieldtheory`, `sigillin`,
+`cosmic-moment`, `medium-modulation`, `entropy-governance`,
+`mandala-visualize`) into sine tones, MIDI sequences, and rhythm patterns.
+
 ## Citation
 
 If you use this software in your research, please cite it:
@@ -93,6 +102,7 @@ If you use this software in your research, please cite it:
 @software{genesisaeon_sonification,
   author    = {GenesisAeon Team},
   title     = {sonification},
+  version   = {1.0.0},
   year      = {2026},
   publisher = {Zenodo},
   doi       = {10.5281/zenodo.19086583},

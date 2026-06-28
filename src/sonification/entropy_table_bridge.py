@@ -14,7 +14,7 @@ class SonificationBridge:
 
     def __init__(self) -> None:
         try:
-            from entropy_table import EntropyTable  # type: ignore[import]
+            from entropy_table import EntropyTable  # type: ignore[import-not-found]
 
             self._table = EntropyTable(domain="sonification")
         except ModuleNotFoundError as exc:

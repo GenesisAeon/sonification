@@ -6,9 +6,9 @@ abstract: "The auditory layer of the GenesisAeon stack – turn entropy waves, U
 authors:
   - name: "GenesisAeon Team"
     email: team@genesisaeon.org
-version: "0.1.0"
-date-released: "2026-03-18"
-license: MIT
+version: "1.0.0"
+date-released: "2026-06-28"
+license: GPL-3.0-or-later
 repository-code: "https://github.com/GenesisAeon/sonification"
 url: "https://genesisaeon.github.io/sonification"
 doi: 10.5281/zenodo.19086583
