@@ -1,6 +1,6 @@
 {
-  "title": "sonification v0.1.0: Real-Time Audio Synthesis for GenesisAeon Entropy Dynamics",
-  "version": "0.1.0",
+  "title": "sonification v1.0.0: Real-Time Audio Synthesis for GenesisAeon Entropy Dynamics",
+  "version": "1.0.0",
   "upload_type": "software",
   "access_right": "open",
   "language": "eng",
@@ -10,7 +10,7 @@
       "affiliation": "GenesisAeon (Independent Researcher)"
     }
   ],
-  "description": "sonification v0.1.0 provides real-time audio synthesis for the GenesisAeon ecosystem, mapping UTAC-Logistic ODE output, CREP scores (Coherence·Resonance·Emergence·Poetics), and phase-transition events to musical parameters via frequency modulation and granular synthesis. Designed as the optional [audio] plugin for genesis-os, it enables direct perceptual feedback of entropy dynamics and self-organized criticality. Dual-licensed: GPLv3-or-later (code) + CC BY 4.0 (documentation).",
+  "description": "sonification v1.0.0 provides real-time audio synthesis for the GenesisAeon ecosystem, mapping UTAC-Logistic ODE output, CREP scores (Coherence·Resonance·Emergence·Poetics), and phase-transition events to musical parameters via frequency modulation and granular synthesis. Designed as the optional [audio] plugin for genesis-os, it enables direct perceptual feedback of entropy dynamics and self-organized criticality. Dual-licensed: GPLv3-or-later (code) + CC BY 4.0 (documentation).",
   "keywords": [
     "genesis-aeon", "utac", "crep", "criticality", "self-organized-criticality",
     "mirror-machine", "fractal", "sonification", "audio-synthesis",
