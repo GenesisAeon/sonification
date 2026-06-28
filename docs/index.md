@@ -5,15 +5,19 @@
 ## Install
 
 ```bash
-pip install sonification
+pip install genesisaeon-sonification
 # or
-uv tool install sonification
+uv tool install genesisaeon-sonification
 ```
+
+> The PyPI distribution name is `genesisaeon-sonification` (the name
+> `sonification` was already taken on PyPI). The Python module and CLI
+> are unaffected — `import sonification`, `soni ...`.
 
 With full stack integration:
 
 ```bash
-pip install sonification[stack]
+pip install genesisaeon-sonification[stack]
 ```
 
 ## Quickstart
