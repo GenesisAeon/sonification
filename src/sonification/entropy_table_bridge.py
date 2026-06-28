@@ -20,7 +20,8 @@ class SonificationBridge:
         except ModuleNotFoundError as exc:
             raise ImportError(
                 "entropy-table is not installed. "
-                "Run `pip install sonification[stack]` to enable stack integration."
+                "Run `pip install genesisaeon-sonification[stack]` "
+                "to enable stack integration."
             ) from exc
 
     def add_sound(self, key: str, value: str) -> None:

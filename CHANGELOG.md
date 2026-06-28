@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
+### Changed
+- Renamed the PyPI distribution from `sonification` to
+  `genesisaeon-sonification` — the `sonification` name was already
+  taken on PyPI by an unrelated project. The importable Python module
+  (`import sonification`) and the `soni` CLI entry point are unchanged.
 
 ## [1.0.0] - 2026-06-28
 ### Added

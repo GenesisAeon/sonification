@@ -1,5 +1,5 @@
 [project]
-name = "sonification"
+name = "genesisaeon-sonification"
 version = "1.0.0"
 description = "Data sonification layer for the GenesisAeon stack -- entropy waves to sine tones, UTAC thresholds to pitches, mandala resonance to rhythms."
 readme = "README.md"

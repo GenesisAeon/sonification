@@ -70,7 +70,7 @@ Extract beat-time offsets (seconds) from peaks in a mandala resonance signal.
 
 ### `SonificationBridge`
 
-Optional [stack] integration with entropy-table. Requires `pip install sonification[stack]`.
+Optional [stack] integration with entropy-table. Requires `pip install genesisaeon-sonification[stack]`.
 
 ```python
 from sonification.entropy_table_bridge import SonificationBridge
