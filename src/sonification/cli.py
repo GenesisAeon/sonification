@@ -2,8 +2,17 @@
 
 from __future__ import annotations
 
+import sys
+
 import typer
 from rich.console import Console
+
+# Windows consoles default to a non-UTF-8 codepage, which breaks the Greek
+# letters used in this CLI's output (e.g. beta) with UnicodeEncodeError.
+# Force UTF-8 stdout/stderr so behavior matches Linux/macOS terminals.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
 
 from .core import (
     entropy_wave_to_audio,
@@ -25,7 +34,7 @@ def version() -> None:
     """Show the installed sonification version."""
     from . import __version__
 
-    console.print(f"[bold]sonification[/] {__version__}")
+    console.print(f"[bold]sonification[/] {__version__}", highlight=False)
 
 
 @app.command()
@@ -63,7 +72,9 @@ def mandala(
     # Placeholder resonance – integrate with mandala-visualizer via [stack] extra
     resonance = np.abs(np.sin(np.linspace(0, 4 * np.pi, 64)))
     beats = mandala_resonance_to_rhythm(resonance, bpm=bpm)
-    console.print(f"[bold magenta]Mandala rhythm:[/] {len(beats)} beat(s) at {bpm} BPM")
+    console.print(
+        f"[bold magenta]Mandala rhythm:[/] {len(beats)} beat(s) at {bpm} BPM", highlight=False
+    )
     for i, t in enumerate(beats[:8]):
         console.print(f"  beat {i + 1:02d}: {t:.4f}s")
 
