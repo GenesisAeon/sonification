@@ -82,5 +82,23 @@ def mandala(
         console.print(f"  beat {i + 1:02d}: {t:.4f}s")
 
 
+@app.command()
+def export(
+    output: str = typer.Option(
+        "domains.yaml", "--output", "-o", help="Output YAML path."
+    ),
+) -> None:
+    """Export sonification parameters to entropy-table via the optional [stack] extra.
+
+    Requires: pip install genesisaeon-sonification[stack]
+    """
+    from .entropy_table_bridge import SonificationBridge
+
+    bridge = SonificationBridge()
+    bridge.add_sound("phi_freq", "1.618")
+    path = bridge.export(output)
+    console.print(f"[bold green]Exported to {path}[/]")
+
+
 if __name__ == "__main__":
     app()
