@@ -110,9 +110,9 @@ If you use this software in your research, please cite it:
   version   = {1.0.0},
   year      = {2026},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.19086583},
-  url       = {https://doi.org/10.5281/zenodo.19086583}
+  doi       = {10.5281/zenodo.21000416},
+  url       = {https://doi.org/10.5281/zenodo.21000416}
 }
 ```
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19086583.svg)](https://doi.org/10.5281/zenodo.19086583)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21000416.svg)](https://doi.org/10.5281/zenodo.21000416)

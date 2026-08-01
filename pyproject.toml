@@ -59,7 +59,7 @@ soni = "sonification.cli:app"
 Repository = "https://github.com/GenesisAeon/sonification"
 Issues = "https://github.com/GenesisAeon/sonification/issues"
 Documentation = "https://genesisaeon.github.io/sonification"
-DOI = "https://doi.org/10.5281/zenodo.19086583"
+DOI = "https://doi.org/10.5281/zenodo.21000416"
 
 [build-system]
 requires = ["hatchling"]
