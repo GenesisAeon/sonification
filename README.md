@@ -92,7 +92,7 @@ Built with [numpy](https://numpy.org/) · [scipy](https://scipy.org/) · [midiut
 
 ## Role in the GenesisAeon Ecosystem
 
-`sonification` is **P-SONIC** in the GenesisAeon package registry — the
+`sonification` is **P81** (formerly informally "P-SONIC") in the GenesisAeon package registry — the
 audio-mapping layer of the ecosystem. It has no characteristic CREP
 coupling value (Γ) of its own; instead it sonifies the Γ/CREP/UTAC state
 produced by upstream packages (`utac-core`, `fieldtheory`, `sigillin`,
